@@ -12,12 +12,46 @@ def index():
 
 @main.route('/catalog')
 def catalog():
-    return render_template('catalog.html')
-
-@main.route('/owl')
-def owl():
-    return render_template('owl.html')
+    context = {
+        'title': 'CATALOG',
+    }
+    return render_template('catalog.html', **context)
 
 @main.route('/patchnotes')
 def patchnotes():
-    return render_template('patchnotes.html')
+    context = {
+        'title': 'PATCH NOTES'
+    }
+    return render_template('patchnotes.html', **context)
+   
+@main.route('/info')
+def info():
+    context = {
+        'title': 'INFO'
+    }
+    return render_template('info.html', **context)
+
+# CHARACTERSPAGE pages
+@main.route('/allcharacters')
+def allcharacters():
+    context = {
+        'title': 'ALL CHARACTERS'
+    }
+    return render_template('allcharacters.html', **context)
+
+
+# OWL pages
+
+@main.route('/owl')
+def owl():
+    context = {
+        'title': 'OWL'
+    }
+    return render_template('owl.html', **context)
+
+@main.route('/teams')
+def teams():
+    context = {
+        'title': 'TEAMS'
+    }
+    return render_template('teams.html', **context)

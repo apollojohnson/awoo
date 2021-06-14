@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ url_for('main.patchnotes') }}">Patch Notes</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('main.allcharacters') }}">Character Info</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 {% if current_user.is_authenticated %}
