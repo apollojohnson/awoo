@@ -31,13 +31,36 @@ def info():
     }
     return render_template('info.html', **context)
 
+
 # CHARACTERSPAGE pages
+
 @main.route('/allcharacters')
 def allcharacters():
     context = {
         'title': 'ALL CHARACTERS'
     }
     return render_template('allcharacters.html', **context)
+
+@main.route('/anainfo')
+def anainfo():
+    context = {
+        'title': 'ANA INFO'
+    }
+    return render_template('1ana.html', **context)
+
+@main.route('/asheinfo')
+def asheinfo():
+    context = {
+        'title': 'ASHE INFO'
+    }
+    return render_template('1ashe.html', **context)
+
+@main.route('/dvainfo')
+def dvainfo():
+    context = {
+        'title': 'DVA INFO'
+    }
+    return render_template('1dva.html', **context)
 
 
 # OWL pages
