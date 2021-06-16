@@ -33,6 +33,19 @@ def checkout():
     }
     return render_template('2checkout.html', **context)
 
+@main.route('/wigs')
+def wigs():
+    context = {
+        'title': 'WIGS',
+    }
+    return render_template('allwigs.html', **context)
+
+@main.route('/fabric')
+def fabric():
+    context = {
+        'title': 'FABRIC',
+    }
+    return render_template('allfabric.html', **context)
 
 
 
@@ -80,6 +93,20 @@ def dvainfo():
         'title': 'DVA INFO'
     }
     return render_template('1dva.html', **context)
+
+@main.route('/mccreeinfo')
+def mccreeinfo():
+    context = {
+        'title': 'MCCREE INFO'
+    }
+    return render_template('1mccree.html', **context)
+
+@main.route('/sigmainfo')
+def sigmainfo():
+    context = {
+        'title': 'SIGMA INFO'
+    }
+    return render_template('1sigma.html', **context)
 
 
 # OWL pages
@@ -133,7 +160,7 @@ def cotton():
     context = {
         'title': 'COTTON'
     }
-    return render_template('cotton.html', **context)
+    return render_template('4cotton.html', **context)
 
     
 @main.route('/fur')
