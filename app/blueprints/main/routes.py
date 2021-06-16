@@ -97,3 +97,56 @@ def teams():
         'title': 'TEAMS'
     }
     return render_template('teams.html', **context)
+
+    # PRODUCT pages
+
+
+
+# PRODUCT pages
+
+@main.route('/longwig')
+def longwig():
+    context = {
+        'title': 'LONG WIG'
+    }
+    return render_template('3longwig.html', **context)
+
+    
+@main.route('/mediumwig')
+def mediumwig():
+    context = {
+        'title': 'MEDIUM WIG'
+    }
+    return render_template('3mediumwig.html', **context)
+
+    
+@main.route('/shortwig')
+def shortwig():
+    context = {
+        'title': 'SHORT WIG'
+    }
+    return render_template('3shortwig.html', **context)
+
+    
+@main.route('/cotton')
+def cotton():
+    context = {
+        'title': 'COTTON'
+    }
+    return render_template('cotton.html', **context)
+
+    
+@main.route('/fur')
+def fur():
+    context = {
+        'title': 'FUR'
+    }
+    return render_template('4fur.html', **context)
+
+    
+@main.route('/satin')
+def satin():
+    context = {
+        'title': 'SATIN'
+    }
+    return render_template('4satin.html', **context)
