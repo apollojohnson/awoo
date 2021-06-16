@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    body {
+                        font-family: "Lato", sans-serif;}
+
+                    .sidenav {
+                        width: 240px;
+                        position: fixed;
+                        z-index: 1;
+                        top: 80px;
+                        left: 50px;
+                        background: #ffffff;
+                        overflow-x: hidden;
+                        padding: 8px 0;
+                    }
+
+                    .sidenav a {
+                        padding: 6px 8px 6px 16px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: #3F3F3F;
+                        display: block;
+                    }
+
+                    .sidenav a:hover {
+                        color: #FF9122;
+                    }
+
+                    .main {
+                        margin-left: 140px;
+                        /* Same width as the sidebar + left position in px */
+                        font-size: 28px;
+                        /* Increased text to enable scrolling */
+                        padding: 0px 10px;
+                    }
+
+                    @media screen and (max-height: 450px) {
+                        .sidenav {
+                            padding-top: 15px;
+                        }
+
+                        .sidenav a {
+                            font-size: 18px;
+                        }
+                    }
+                </style>
+            </head>
+
+            <body>
+                <div class="sidenav">
+                    <a href="#about">Featured Items</a>
+                    <a href="#services">Wigs</a>
+                    <a href="#clients">Fabric</a>
+                    <a href="#clients">Accessories</a>
+                    <a href="#contact">Newsletter</a>
+                </div>
+            </body>
+        </div>
+
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-secondary">Item Page</a>
+                    <a href="#" class="btn btn-danger">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                        <a href="#" class="btn btn-secondary">Item Page</a>
+                        <a href="#" class="btn btn-danger">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                        <a href="#" class="btn btn-secondary">Item Page</a>
+                        <a href="#" class="btn btn-danger">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

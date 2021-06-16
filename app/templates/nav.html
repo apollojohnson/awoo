@@ -1,3 +1,11 @@
+<!-- CSS -->
+
+<style>
+.container-fluid {background-color: #FF9122;}
+</style>
+
+<!-- HTML -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url_for('main.index') }}">overmatch</a>
@@ -9,26 +17,27 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ url_for('main.index') }}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ url_for('main.catalog') }}">Catalog</a>
-                </li>
                 {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('blog.myposts') }}">Favorites</a>
+                        <a class="nav-link" href="{{ url_for('main.shop') }}">Shop</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
                     </li>
                 {% endif %}
-                <li class="nav-item">
+
+
+                <!-- <li class="nav-item">
                     <a class="nav-link active" href="{{ url_for('main.owl') }}">OWL</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ url_for('main.patchnotes') }}">Patch Notes</a>
-                </li>
+                </li> -->
+
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('main.allcharacters') }}">Character Info</a>
+                    <a class="nav-link active" href="{{ url_for('main.allcharacters') }}">Characters</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

@@ -10,12 +10,31 @@ def index():
     }
     return render_template('index.html', **context)
 
-@main.route('/catalog')
-def catalog():
+# SHOP pages
+
+@main.route('/shop')
+def shop():
     context = {
-        'title': 'CATALOG',
+        'title': 'SHOP',
     }
-    return render_template('catalog.html', **context)
+    return render_template('2shop.html', **context)
+
+@main.route('/cart')
+def cart():
+    context = {
+        'title': 'CART',
+    }
+    return render_template('2cart.html', **context)
+
+@main.route('/checkout')
+def checkout():
+    context = {
+        'title': 'CHECKOUT',
+    }
+    return render_template('2checkout.html', **context)
+
+
+
 
 @main.route('/patchnotes')
 def patchnotes():
