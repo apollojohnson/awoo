@@ -11,6 +11,10 @@
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
+                    .card {
+                        border: 5px solid black;
+                    }
+
                     body {
                         font-family: "Lato", sans-serif;
                     }
@@ -35,7 +39,7 @@
                     }
 
                     .sidenav a:hover {
-                        color: #FF9122;
+                        color: #d9534f;
                     }
 
                     .main {
@@ -67,11 +71,12 @@
                 </div>
             </body>
         </div>
-        
 
-{% include 'other.html' %}
-<br>
 
-</div></div>
+        {% include 'other.html' %}
+        <br>
+
+    </div>
+</div>
 
 {% endblock content %}
