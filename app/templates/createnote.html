@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .card-body h4{
+        color:#d9534f ;
+    }
+    .card-body h3{
+        color:#d9534f ;
+    }
+</style>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card" style="width: 45rem;">
+                <div class="card-body welcome">
+                    <h4>Create A Post</h4>
+                    <form action="" method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <fieldset>
+                                {{ form.title.label }}
+                                {{ form.title(class='form-control', placeholder='Title') }}
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                {{ form.body.label }}
+                                {{ form.body(class='form-control', placeholder='Enter Body Info Here') }}
+                            </fieldset>
+                            <br>
+                            {{ form.submit(class='btn btn-primary') }}
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            {% include 'notehelp.html' %}
+        </div>
+    </div>
+</div>
+<br>
+
+
+
+{% endblock content %}

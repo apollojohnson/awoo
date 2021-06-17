@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .card-body h4{
+        color:#d9534f ;
+    }
+    .card-body h3{
+        color:#d9534f ;
+    }
+</style>
+
+<br>
+<div class="card" style="width: 70rem;">
+    <div class="card-body">
+        {% if current_user.is_authenticated %}
+        <h4>Welcome to your notepad, {{ current_user.username }}! Post whatever you want, the world is your oyster.</h4>
+        {% else %}
+        <h4>Sign in or register to see your notes!</h4>
+        {% endif %}
+    </div>
+</div>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card" style="width: 45rem;">
+                <div class="card-body welcome">
+                    {% for post in posts %}
+                    <a href="{{ url_for('blog.note_detail', post_id=post.id) }}">
+                        <h3>{{ post.title }}</h3>
+                    </a>
+                    <p>{{ post.body }}</p>
+                    <hr>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            {% include 'notehelp.html' %}
+        </div>
+    </div>
+</div>
+<br>
+{% endblock content %}
