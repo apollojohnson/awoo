@@ -2,223 +2,212 @@
 
 {% block content %}
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title>Cart</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="eCommerce HTML Template Free Download" name="keywords">
-    <meta content="eCommerce HTML Template Free Download" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS Libraries -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/slick/slick.css" rel="stylesheet">
-    <link href="lib/slick/slick-theme.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
 </head>
 
-<body>
-    <!-- Cart Start -->
-    <div class="cart-page">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="cart-page-inner">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                        <th>Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="align-middle">
-                                    <tr>
-                                        <td>
-                                            <div class="img">
-                                                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/8/83/Hamilton-poster.jpg" alt="Hamilton" class="img-fluid max-width 50%"></a>
-                                                <p>Hamilton</p>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card" style="width: 45rem;">
+                <div class="card-body welcome">
+                    <body>
+                        <div class="shopping-cart">
+                            <!-- Title -->
+                            <div class="title">
+                                Shopping Cart:
+                            </div>
+                            <br>
+                            <!-- Product #1 -->
+                            <div class="item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+
+                                            <div class="image">
+                                                <img src="https://i.ibb.co/KwBH5zn/yellowsatin.png" alt="yellowsatin"
+                                                    class="img-thumbnail" />
                                             </div>
-                                        </td>
-                                        <td>$99</td>
-                                        <td>
-                                            <div class="qty">
-                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                <input type="text" value="1">
-                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="description">
+                                                        <span>Satin,</span>
+                                                        <span>Yellow</span>
+                                                    </div><br>
+                                                    <div class="quantity">
+                                                        <button class="plus-btn" type="button" name="button">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                        <input type="text" name="name" value="1">
+                                                        <button class="minus-btn" type="button" name="button">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div><br>
+                                                    <div class="total-price">$20 each</div>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td>$99</td>
-                                        <td><button><i class="fa fa-trash"></i></button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="cart-page-inner">
-                        <div class="row">
-                            <div class="card" style="width: 25rem;">
-                                <div class="col-md-12">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="cart-summary">
-                                        <div class="cart-content">
-                                            <h2>Cart Summary</h2>
-                                            <p>Sub Total<span>$99</span></p>
-                                            <p>Shipping Cost<span>$1</span></p>
-                                            <h3> Total<span>$100</span></h3>
+                            </div>
+                            <hr>
+                            <!-- Product #2 -->
+                            <div class="item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+
+                                            <div class="image">
+                                                <img src="https://i.ibb.co/PCphFQf/medium1.png" alt="mediumwig"
+                                                    class="img-thumbnail" />
+                                            </div>
                                         </div>
-                                        <div class="coupon">
-                                            <input type="text" placeholder="Coupon Code"><p></p>
-                                            <button type="button" class="btn btn-primary">Apply Coupon</button>
-                                            <p></p>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="description">
+                                                        <span>Medium Wig,</span>
+                                                        <span>Lavender</span>
+                                                    </div><br>
+                                                    <div class="quantity">
+                                                        <button class="plus-btn" type="button" name="button">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                        <input type="text" name="name" value="1">
+                                                        <button class="minus-btn" type="button" name="button">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div><br>
+                                                    <div class="total-price">$60 each</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="cart-btn">
-                                            <button type="button" class="btn btn-primary">Update Cart</button>
-                                            <button type="button" class="btn btn-success">Checkout</button>
-                                            <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Product #3 -->
+                            <div class="item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="image">
+                                                <img src="https://i.ibb.co/pPxJQ4x/heatgun.webp" alt="heatgun"
+                                                    class="img-thumbnail" />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="description">
+                                                        <span>Heat Gun,</span>
+                                                        <span>Small</span>
+                                                    </div><br>
+                                                    <div class="quantity">
+                                                        <button class="plus-btn" type="button" name="button">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                        <input type="text" name="name" value="1">
+                                                        <button class="minus-btn" type="button" name="button">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div><br>
+                                                    <div class="total-price">$80 each</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Cart End -->
-    <hr>
-    <!-- Feature Start-->
-    <div class="feature">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-md-6 feature-col">
-                    <div class="feature-content">
-                        <i class="fab fa-cc-mastercard"></i>
-                        <h2>Secure Payment</h2>
-                        <p>
-                            We accept all major credit cards!
-
-                            <img src="https://freepngimg.com/download/credit_card/25920-8-major-credit-card-logo.png"
-                                class="img-fluid max-width: 80%;">
-                        </p>
-
-                    </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h3>
+                        Cart Total:
+                    </h3>
+                    <h4>
+                        $150
+                    </h4><br>
+                    <a href="checkout"><button type="button" class="btn btn-danger">Checkout</button></a>
                 </div>
-                <div class="col-lg-3 col-md-6 feature-col">
-                    <div class="feature-content">
-                        <i class="fa fa-truck"></i>
-                        <h2>Worldwide Delivery</h2>
-                        <p>
-                            <img src="https://i.pinimg.com/originals/dd/d5/0c/ddd50c7fd01a3a3927b932d8a5d4857c.png"
-                                class="img-fluid max-width: 50%;">
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 feature-col">
-                    <div class="feature-content">
-                        <i class="fa fa-sync-alt"></i>
-                        <h2>30-Day Return Policy</h2>
-                        <p>
-                            Not satisfied? Contact us at bootway@email.com for help.
-                            <img src="https://cdn.shopify.com/s/files/1/0046/8752/8024/files/30-day-return-policy_026ad52d-fbd7-4ad3-b662-128cd9162bee.jpg?v=1550703270" class="img-fluid max-width: 50%;">
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 feature-col">
-                    <div class="feature-content">
-                        <i class="fa fa-comments"></i>
-                        <h2>24/7 Support</h2>
-                        <p>
-                            Need help right away? Call us at 312-312-3123 to speak with a representative.
-                            <img src="https://lh3.googleusercontent.com/proxy/YLSJ2a15RSuIPPhNGg5udhai69Kjrvjxfh8IIyXzdowA4_YMS5RSy5kZoDxRttNEZmiaIjADBp6adIYQJgkzyNyiG_bxLqqbA-Y7Wy3EHcgknqxZI4CzQi3sfparoH_atsa4FnBIVa4" class="img-fluid max-width: 50%;">
-
-                        </p>
-                    </div>
-                </div>
-            </div>
+              </div>
         </div>
     </div>
-    <!-- Feature End-->
-    <hr>
-
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <h2>Get in Touch</h2>
-                        <div class="contact-info">
-                            <p><i class="fa fa-map-marker"></i> 550 Main St, Chicago IL, 60653</p>
-                            <p><i class="fa fa-envelope"></i> bootway@email.com</p>
-                            <p><i class="fa fa-phone"></i> 312-312-3123</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <h2>Follow Us</h2>
-                        <div class="contact-info">
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <h1>Subscribe to our Newsletter:</h1>
-                        <div class="form">
-                            <input type="email" value="Your email here">
-                            <button>Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-    <hr>
+</div>
+<br>
 
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/slick/slick.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<style>
+    .card-body h3 {
+        font-size: 30px;
+        color: #d9534f;
+    }
+
+    .title {
+        font-size: 30px;
+        color: #d9534f;
+    }
+</style>
+
+
+<script type="text/javascript">
+    $('.minus-btn').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value > 1) {
+            value = value - 1;
+        } else {
+            value = 0;
+        }
+
+        $input.val(value);
+
+    });
+
+    $('.plus-btn').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value < 100) {
+            value = value + 1;
+        } else {
+            value = 100;
+        }
+
+        $input.val(value);
+    });
+
+    $('.like-btn').on('click', function () {
+        $(this).toggleClass('is-active');
+    });
+</script>
 </body>
 
 </html>
+
 
 {% endblock content %}
