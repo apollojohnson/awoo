@@ -7,43 +7,49 @@
 <br>
 <div class="container">
     <div class="row">
-      <div class="col-sm">
+        <div class="col-sm">
 
-        <div class="card">
-            <div class="card-body">
-                ff
+            <div class="card">
+                <div class="card-body">
+                    Log in to enjoy the shop and notepad features!
+                </div>
             </div>
-          </div>
-      </div>
-      <div class="col-sm">
-        <div class="card">
-            <div class="card-body">
-                <form action="" method="POST">
-                    {{ form.hidden_tag() }}
-                    <div class="form-group">
-                        <fieldset>
-                            {{ form.username.label }}
-                            {{ form.username(class='form-control', placeholder='Username') }}
-                        </fieldset>
-                        <br>
-                        <fieldset>
-                            {{ form.password.label }}
-                            {{ form.password(class='form-control', placeholder='Password') }}
-                        </fieldset>
-                        <br>
-                        <fieldset>
-                            {{ form.remember_me }}
-                            {{ form.remember_me.label }}
-                        </fieldset>
-                        <br>
-                        {{ form.submit(class='btn btn-danger') }}
-                    </div>
-                </form>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <fieldset>
+                                {{ form.username.label }}
+                                {{ form.username(class='form-control', placeholder='Username') }}
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                {{ form.password.label }}
+                                {{ form.password(class='form-control', placeholder='Password') }}
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                {{ form.remember_me }}
+                                {{ form.remember_me.label }}
+                            </fieldset>
+                            <br>
+                            {{ form.submit(class='btn btn-danger') }}
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
-      </div>
+        </div>
     </div>
-  </div>
-  <br>
+</div>
+<br>
+
+<style>
+    .card {
+        border: 5px solid black;
+    }
+</style>
 
 {% endblock content %}
