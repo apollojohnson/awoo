@@ -6,10 +6,10 @@ from .forms import PostForm, DeletePostForm
 from .models import Post
 
 
-@blog.route('/createpost', methods=['GET', 'POST'])
+@blog.route('/createnote', methods=['GET', 'POST'])
 @login_required
-def createpost():
-    title = 'CREATE POST'
+def createnote():
+    title = 'CREATE NOTE'
     form = PostForm()
     if request.method == 'POST' and form.validate_on_submit():
         post_title = form.title.data
@@ -21,40 +21,40 @@ def createpost():
         db.session.add(new_post)
         db.session.commit()
 
-        flash(f"You have created a post: {post_title}", 'info')
+        flash(f"You have created a note: {post_title}", 'info')
 
-        return redirect(url_for('main.index'))
+        return redirect(url_for('blog.mynotes'))
 
-    return render_template('createpost.html', title=title, form=form)
+    return render_template('createnote.html', title=title, form=form)
 
 
-@blog.route('/myposts')
+@blog.route('/mynotes')
 @login_required
-def myposts():
+def mynotes():
     title = 'MY POSTS'
     posts = Post.query.filter_by(user_id=current_user.id).all()
-    return render_template('myposts.html', title=title, posts=posts)
+    return render_template('mynotes.html', title=title, posts=posts)
 
 
-@blog.route('/posts/<int:post_id>')
-def post_detail(post_id):
+@blog.route('/notes/<int:post_id>')
+def note_detail(post_id):
     post = Post.query.get_or_404(post_id)
     context = {
         'post': post,
         'title': post.title,
         'form': DeletePostForm()
     }
-    return render_template('post_detail.html', **context)
+    return render_template('note_detail.html', **context)
 
 
-@blog.route('/posts/update/<int:post_id>', methods=['GET', 'POST'])
+@blog.route('/notes/update/<int:post_id>', methods=['GET', 'POST'])
 @login_required
-def post_update(post_id):
+def note_update(post_id):
     post = Post.query.get_or_404(post_id)
     title = f'UPDATE {post.title}'
     if post.author.id != current_user.id:
-        flash("You cannot update another user's post. Who do you think you are?", "warning")
-        return redirect(url_for('blog.myposts'))
+        flash("You can't update another user's note!", "warning")
+        return redirect(url_for('blog.mynotes'))
     update_form = PostForm()
     if request.method == 'POST' and update_form.validate_on_submit():
         post_title = update_form.title.data
@@ -65,22 +65,22 @@ def post_update(post_id):
 
         db.session.commit()
 
-        return redirect(url_for('blog.post_detail', post_id=post.id))
+        return redirect(url_for('blog.note_detail', post_id=post.id))
 
-    return render_template('post_update.html', title=title, post=post, form=update_form)
+    return render_template('note_update.html', title=title, post=post, form=update_form)
 
 
-@blog.route('/posts/delete/<int:post_id>', methods=['POST'])
+@blog.route('/notes/delete/<int:post_id>', methods=['POST'])
 @login_required
 def post_delete(post_id):
     post = Post.query.get_or_404(post_id)
     if post.author.id != current_user.id:
-        flash("You cannot delete another user's post. Who do you think you are?", "warning")
-        return redirect(url_for('blog.myposts'))
+        flash("You can't delete another user's post!", "warning")
+        return redirect(url_for('blog.mynotes'))
     form = DeletePostForm()
     if form.validate_on_submit():
         db.session.delete(post)
         db.session.commit()
         flash(f'{post.title} has been deleted', 'info')
-        return redirect(url_for('blog.myposts'))
-    return redirect(url_for('main.index'))
+        return redirect(url_for('blog.mynotes'))
+    return redirect(url_for('blog.mynotes'))

@@ -21,6 +21,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('main.shop') }}">Shop</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog.mynotes') }}">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog.createnote') }}">New Note</a>
+                    </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
