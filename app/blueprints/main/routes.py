@@ -108,6 +108,29 @@ def sigmainfo():
     }
     return render_template('1sigma.html', **context)
 
+@main.route('/CaptainAmari')
+def CaptainAmari():
+    context = {
+        'title': 'CAPTAIN AMARI'
+    }
+    return render_template('CaptainAmari.html', **context)
+
+@main.route('/SigmaCarbonFiber')
+def SigmaCarbonFiber():
+    context = {
+        'title': 'CARBON FIBER'
+    }
+    return render_template('SigmaCarbonFiber.html', **context)
+
+@main.route('/McCreeClassic')
+def McCreeClassic():
+    context = {
+        'title': 'CLASSIC'
+    }
+    return render_template('McCreeClassic.html', **context)
+
+
+
 
 # OWL pages
 
@@ -124,8 +147,6 @@ def teams():
         'title': 'TEAMS'
     }
     return render_template('teams.html', **context)
-
-    # PRODUCT pages
 
 
 
