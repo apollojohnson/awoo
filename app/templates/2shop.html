@@ -62,22 +62,36 @@
                     <a href="shop">All Items</a>
                     <a href="wigs">Wigs</a>
                     <a href="fabric">Fabric</a>
-                    <a href="accessories">Accessories</a>
-                    <a href="newsletter">Newsletter</a>
+                    <a href="other">Other</a>
                 </div>
             </body>
         </div>
 
-<style>
-    .card {
-    min-height: 750px;
-}
-</style>
+        <style>
+            .f {
+                min-height: 550px;
+            }
+        </style>
 
-{% include 'wigs.html' %}
-<br>
-{% include 'fabric.html' %}
-</div></div>
+        <style>
+            .w {
+                min-height: 750px;
+            }
+        </style>
+
+        <style>
+            .o {
+                min-height: 500px;
+            }
+        </style>
+
+        {% include 'wigs.html' %}
+        <br>
+        {% include 'fabric.html' %}
+        <br>
+        {% include 'other.html' %}
+    </div>
+</div>
 <br>
 
 {% endblock content %}

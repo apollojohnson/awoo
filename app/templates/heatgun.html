@@ -4,11 +4,14 @@
 {% block content %}
 
 <br>
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm">
             <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="https://i.ibb.co/NjM3xnL/longwig.png" alt="longwig">
+                <img class="card-img-top" src="https://i.ibb.co/pPxJQ4x/heatgun.webp" alt="heatgun">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
@@ -38,14 +41,19 @@
                             exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
                             consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
                             molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-
-                            {% include '2coloroptions.html' %}
+                            
+                        Select Size:
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
+                        </select>
                     </div>
                 </div>
             </div>
 
             <br>
-            {% include '2shopbuttons.html' %}
+            {% include '5shopbuttons.html' %}
         </div>
     </div>
 </div>

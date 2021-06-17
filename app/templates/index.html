@@ -1,26 +1,87 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="banner">
-    <h1 class="header-text">Welcome to overmatch!</h1>
+
+<br>
+<div class="card" style="width: 70rem;">
+    <div class="card-body">
+        {% if current_user.is_authenticated %}
+        <h4>Hello, {{ current_user.username }}!</h4>
+        {% else %}
+        <h4>Sign in or register to see the shop! :)</h4>
+        {% endif %}
+    </div>
 </div>
 
-{% if current_user.is_authenticated %}
-    <h4>Hello, {{ current_user.username }}</h4>
-{% else %}
-    <h4>Sign in or register to enjoy all of our cool features! :)</h4>
-{% endif %}
+<style>
+.welcome {font-size: 30px;}
+</style>
 
-
-    {% for post in posts %}
-    <div class="card mb-5">
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ post.author.username }}</h6>
-          <p class="card-text">{{ post.body }}</p>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card" style="width: 45rem;">
+                <div class="card-body welcome">
+                    <p>Welcome to overmatch!</p>
+                    <p>We strive to be an all-in-one reference app for players, artists, cosplayers, and writers.</p>
+                    Sign in or register to view the shop, where you can purchase costume supplies.
+                </div>
+            </div>
         </div>
-      </div>
-    {% endfor %}
+        <div class="col-sm">
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                    <div class="fling-minislide">
+                        <img src="https://via.placeholder.com/100x200" alt="Slide 3" />
+                        <img src="https://via.placeholder.com/100x200" alt="Slide 2" />
+                        <img src="https://via.placeholder.com/100x200" alt="Slide 1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<style>
+    .fling-minislide {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fling-minislide img {
+        position: absolute;
+        animation: fling-minislide 15s infinite;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    @keyframes fling-minislide {
+        25% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0;
+        }
+    }
+
+    .fling-minislide img:nth-child(3) {
+        animation-delay: 0s;
+    }
+
+    .fling-minislide img:nth-child(2) {
+        animation-delay: 5s;
+    }
+
+    .fling-minislide img:nth-child(1) {
+        animation-delay: 10s;
+    }
+</style>
+
+<br>
 
 {% endblock content %}

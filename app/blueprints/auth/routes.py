@@ -20,14 +20,14 @@ def register():
         # Check if username/email already exists
         existing_user = User.query.filter((User.username == username) | (User.email == email)).all()
         if existing_user:
-            flash('That username or email already exists. Please try again', 'danger')
+            flash('That username already exists. Please try again', 'warning')
             return redirect(url_for('auth.register'))
         
         new_user = User(username, email, password)
         db.session.add(new_user)
         db.session.commit()
 
-        flash(f'Thank you {username} for registering!', 'success')
+        flash(f'Thank you {username} for registering!', 'danger')
 
         msg = Message(f'Thank you, {username}', recipients=[email])
         msg.body = f'Dear {username}, thank you so much for signing up for this super cool app. I hope you enjoy and also you look super good today!'
@@ -53,7 +53,7 @@ def login():
             return redirect(url_for('auth.login'))
         
         login_user(user, remember=form.remember_me.data)
-        flash('You have succesfully logged in!', 'success')
+        flash('You have succesfully logged in!', 'danger')
         return redirect(url_for('main.index'))
 
     return render_template('login.html', title=title, form=form)
@@ -62,5 +62,5 @@ def login():
 @auth.route('/logout')
 def logout():
     logout_user()
-    flash('You have successfully logged out!', 'primary')
+    flash('You have successfully logged out!', 'danger')
     return redirect(url_for('main.index'))

@@ -47,7 +47,12 @@ def fabric():
     }
     return render_template('allfabric.html', **context)
 
-
+@main.route('/other')
+def other():
+    context = {
+        'title': 'OTHER'
+    }
+    return render_template('allother.html', **context)
 
 @main.route('/patchnotes')
 def patchnotes():
@@ -198,3 +203,25 @@ def satin():
         'title': 'SATIN'
     }
     return render_template('4satin.html', **context)
+
+
+@main.route('/eva')
+def eva():
+    context = {
+        'title': 'EVA FOAM'
+    }
+    return render_template('5eva.html', **context)
+
+@main.route('/heatgun')
+def heatgun():
+    context = {
+        'title': 'HEAT GUN'
+    }
+    return render_template('heatgun.html', **context)
+
+@main.route('/hatacc')
+def hatacc():
+    context = {
+        'title': 'HAT ACCESSORIES'
+    }
+    return render_template('hatacc.html', **context)
